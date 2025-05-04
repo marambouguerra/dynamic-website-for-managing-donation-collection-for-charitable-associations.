@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#logo img {
+    height: 80px;
+    width: auto;
+  }
+  header li {
+   list-style: none;
+  }
+
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px;
+}
+
+.financed-projects-btn {
+    background-color: #76032e;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.project-card h3 {
+    font-weight: bold;
+}
+
+.details-btn {
+    background-color: #76032e;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    float: right;
+    font-size: 12px;
+    margin-top: -60px;
+}

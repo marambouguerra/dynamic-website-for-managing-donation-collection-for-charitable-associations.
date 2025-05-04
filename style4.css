@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f7f7f7;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 80px;
+    list-style: none;
+}
+#logo img {
+    height: 80px;
+    width: auto;
+  }
+nav div {
+   display: flex;
+   justify-content: space-between;
+   padding: 10px;
+}
+
+nav  div li a {
+    text-decoration: none;
+    color: #000;
+}
+nav  div li  {
+    list-style: none;
+}
+
+
+
+
+.project-container {
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-info h3 {
+    margin: 0;
+}
+
+.project-info p {
+    color: gray;
+    margin: 5px 0 0;
+}
+
+.project-actions {
+    text-align: right;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.details-btn {
+    background-color: #8B2C55;
+    margin-bottom: 5px;
+}
+
+.delete-btn {
+    background-color: black;
+}
+
+.add-button {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.add-button .btn {
+    background-color: #8B2C55;
+}
+img.profile-logo{
+height: 80px;
+width: 80px;
+
+}

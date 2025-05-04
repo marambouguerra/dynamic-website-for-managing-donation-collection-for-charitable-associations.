@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription Donateur</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+ 
+  <div class="form-container">
+    <div class="form-header">s'inscrire comme Donateur</div>
+
+    <form id="registerForm" action="registerdonateur.php" method="POST"  enctype="multipart/form-data" onsubmit="return validateForm2();">
+      <div class="form-group">
+        <label for="cin">CIN</label>
+        <input type="text" name="cin" id="cin" required>
+      </div>
+      <div class="form-group">
+        <label for="pseudo">Pseudo</label>
+        <input type="text" name="pseudo" id="pseudo" required>
+      </div>
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" id="nom" required>
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" name="prenom" id="prenom" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password" required>
+      </div>
+      <div class="button-container">
+        <button type="submit">Soumettre</button>
+      </div>
+    </form>
+
+    <a href="index.html" class="back-button">← Retour à l'accueil</a>
+  </div>
+  <script>
+    function validateForm2() {
+  const cin = document.getElementById("cin").value.trim();
+  const pseudo = document.getElementById("pseudo").value.trim();
+  const nom = document.getElementById("nom").value.trim();
+  const prenom = document.getElementById("prenom").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  const cinValid = /^[0-9]{8}$/.test(cin);
+  const pseudoValid = /^[a-zA-Z]+$/.test(pseudo);
+  const nomValid = /^[a-zA-Z]+$/.test(nom);
+  const prenomValid = /^[a-zA-Z]+$/.test(prenom);
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const passwordValid = /^[a-zA-Z0-9]{7,}[$#]$/.test(password);
+
+  if (!cinValid) {
+    alert("CIN invalide. Il doit contenir  8 chiffres.");
+    return false;
+  }
+  if (!pseudoValid) {
+    alert("Pseudo invalide. Il doit contenir uniquement des lettres.");
+    return false;
+  }
+  if (!nomValid) {
+    alert("Nom invalide. Il doit contenir uniquement des lettres.");
+    return false;
+  }
+  if (!prenomValid) {
+    alert("Prénom invalide. Il doit contenir uniquement des lettres.");
+    return false;
+  }
+  if (!emailValid) {
+    alert("E-mail invalide. Veuillez entrer un e-mail valide.");
+    return false;
+  }
+  if (!passwordValid) {
+    alert("Mot de passe invalide. Il doit contenir au moins 8 caractères, composés de lettres ou de chiffres, et se terminer par $ ou #.");
+
+    return false;
+  }
+
+  return true;
+}
+
+
+  </script>
+</body>
+</html>
